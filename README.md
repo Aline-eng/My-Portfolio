@@ -28,9 +28,41 @@ my-portfolio/
 ├── tailwind.config.js  # Tailwind configuration
 └── vite.config.js      # Vite configuration
 ```
-🏁 Getting StartedFollow these instructions to set up the project locally on your machine.PrerequisitesNode.js (v18 or higher recommended)npm or yarnInstallationClone the repositorygit clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
+# 🏁 Getting Started
+Follow these instructions to set up the project locally on your machine.
+
+**Prerequisites**
+- Node.js (v18 or higher recommended)
+- npm or yarn
+**Installation**
+Clone the repository
+```
+git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
 cd your-repo-name
-Install dependenciesnpm install
-Run the development servernpm run dev
-Open your browserNavigate to http://localhost:5173 to view the app.
-⚙️ CustomizationUpdate Personal InfoOpen src/App.jsx and look for the data objects near the top or within the JSX.Navigation: Update navLinks array.Skills: Update the skills array inside the Skills section.Projects: Update the mapping array in the Projects section.setup Email FunctionalityThe current form simulates a successful send. To make it functional:Install EmailJS: npm install @emailjs/browserCreate an account at EmailJS.Update the handleSubmit function in App.jsx with your Service ID and Template ID.🚀 DeploymentThis project is optimized for deployment on Vercel or Netlify.Vercel (Recommended)Push your code to GitHub.Import the project into Vercel.Vercel will detect Vite and deploy automatically.NetlifyDrag and drop the dist folder (run npm run build first) or connect via GitHub.🤝 ContributingContributions, issues, and feature requests are welcome!Feel free to check the issues page.Fork the ProjectCreate your Feature Branch (git checkout -b feature/AmazingFeature)Commit your Changes (git commit -m 'Add some AmazingFeature')Push to the Branch (git push origin feature/AmazingFeature)Open a Pull Request📝 LicenseDistributed under the MIT License. See LICENSE for more information.<div align="center"><sub>Built with ❤️ by <a href="https://github.com/yourusername">Aline Nzikwinkunda</a></sub></div>
+```
+Install dependencies
+```npm install```
+Run the development server
+```npm run dev```
+Open your browser
+Navigate to ```http://localhost:5173``` to view the app.
+# ⚙️ Customization
+**Update Personal Info**
+Open `src/App.jsx` and look for the data objects near the top or within the JSX.
+- Navigation: Update navLinks array.
+- Skills: Update the skills array inside the Skills section.
+- Projects: Update the mapping array in the Projects section.
+**Setup Email Functionality**
+The current form simulates a successful send.
+To make it functional:
+Install EmailJS: npm install @emailjs/browser
+Create an account at EmailJS.
+Update the handleSubmit function in App.jsx with your Service ID and Template ID.
+
+# 🚀 Deployment
+This project is optimized for deployment on Vercel or Netlify.Vercel (Recommended)Push your code to GitHub.Import the project into Vercel.Vercel will detect Vite and deploy automatically.NetlifyDrag and drop the dist folder (run npm run build first) or connect via GitHub.
+# 🤝 Contributing
+Contributions, issues, and feature requests are welcome!Feel free to check the issues page.Fork the ProjectCreate your Feature Branch (git checkout -b feature/AmazingFeature)Commit your Changes (git commit -m 'Add some AmazingFeature')Push to the Branch (git push origin feature/AmazingFeature)Open a Pull Request
+# 📝 License
+Distributed under the MIT License. See LICENSE for more information.
+<div align="center"><sub>Built with ❤️ by <a href="https://github.com/Aline-eng">Aline Nzikwinkunda</a></sub></div>
