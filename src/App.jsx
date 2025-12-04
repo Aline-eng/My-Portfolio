@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import { 
   Mail, 
   FileText, 
@@ -109,12 +110,21 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormStatus('sending');
-    // Simulate email sending
-    setTimeout(() => {
-      setFormStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setFormStatus('idle'), 3000);
-    }, 1500);
+
+    emailjs.sendForm(
+      'service_zrz01ur',
+      'template_vdi7knx',
+      e.target,
+      'dlAwOPnYR5GHUwZbT'
+    )
+    .then((result) => {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setFormStatus('idle'), 3000);
+    }, (error) => {
+        console.log(error.text);
+        setFormStatus('error');
+    });
   };
 
   const navLinks = [
@@ -210,12 +220,14 @@ const App = () => {
         <div className="grid items-center w-full gap-12 mx-auto max-w-7xl md:grid-cols-2">
           <div>
             <p className="mb-4 ml-1 font-mono text-teal-400">Hi, my name is</p>
-            <h2 className="mb-4 text-5xl font-bold tracking-tight md:text-7xl text-slate-100">
+            <h5 className="mb-4 font-semibold tracking-tight text-1xl md:text-5xl text-slate-100">
               Aline Nzikwinkunda Software Engineering Student
-            </h2>
-            <h3 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl text-slate-400">
+            </h5>
+            <h7 className="mb-6 text-2xl font-bold tracking-tight md:text-4xl text-slate-400">
               Focused on Web Development & Real-World Projects
-            </h3>
+            </h7>
+            
+            <br />  <br /> <br />
             <p className="max-w-lg mb-10 text-lg leading-relaxed text-slate-400">
               I build practical and user-friendly web applications using modern tools and clean design principles. 
                 I’m currently sharpening my full-stack development skills as I work on real projects.
@@ -312,7 +324,7 @@ const App = () => {
               <div className="relative overflow-hidden transition-colors border-2 rounded bg-slate-800 aspect-square border-slate-700 group-hover:border-teal-400">
                  {/* Replace with your image */}
                  <div className="flex items-center justify-center w-full h-full bg-slate-800 text-slate-600">
-                    <span className="font-mono">User Image</span>
+                    <img src="/profile.jpg" alt="Aline Nzikwinkunda" className="font-mono" />
                  </div>
               </div>
             </div>
@@ -406,7 +418,7 @@ const App = () => {
                   required
                   type="text" 
                   className="w-full p-3 transition-colors border rounded bg-slate-950 border-slate-800 text-slate-200 focus:border-teal-500 focus:outline-none"
-                  placeholder="John Doe"
+                  placeholder="Aline Nzikwinkunda"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                 />
@@ -417,7 +429,7 @@ const App = () => {
                   required
                   type="email" 
                   className="w-full p-3 transition-colors border rounded bg-slate-950 border-slate-800 text-slate-200 focus:border-teal-500 focus:outline-none"
-                  placeholder="john@example.com"
+                  placeholder="alinenzikwinkunda@gmail.com"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                 />
