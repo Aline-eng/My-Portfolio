@@ -151,7 +151,7 @@ const App = () => {
         }`}
       >
         <div className="flex items-center justify-between px-6 mx-auto max-w-7xl">
-          <a href="#" className="text-2xl font-bold tracking-tighter transition-colors text-slate-100 hover:text-teal-400">
+          <a href="#" className="font-mono text-2xl font-bold tracking-tighter transition-colors text-slate-100 hover:text-teal-400">
             AN<span className="text-teal-400">.</span>DEV
           </a>
 
@@ -322,7 +322,6 @@ const App = () => {
             <div className="relative group">
               <div className="absolute inset-0 transition-all duration-300 translate-x-3 translate-y-3 bg-teal-500 rounded group-hover:translate-x-1 group-hover:translate-y-1"></div>
               <div className="relative overflow-hidden transition-colors border-2 rounded bg-slate-800 aspect-square border-slate-700 group-hover:border-teal-400">
-                 {/* Replace with your image */}
                  <div className="flex items-center justify-center w-full h-full bg-slate-800 text-slate-600">
                     <img src="/profile.jpg" alt="Aline Nzikwinkunda" className="font-mono" />
                  </div>
