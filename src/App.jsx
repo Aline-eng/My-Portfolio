@@ -403,8 +403,6 @@ const App = () => {
             <span>Next.js</span>
             <span>Django REST</span>
             <span>PostgreSQL</span>
-            <span>Material-UI</span>
-            <span>JWT Auth</span>
           </div>
         </div>
       </div>
