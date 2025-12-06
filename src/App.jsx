@@ -362,43 +362,107 @@ const App = () => {
 
       {/* Projects Section */}
       <section id="projects" className="px-6 py-20 bg-slate-900/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-3xl font-bold text-slate-100"><span className="mr-2 font-mono text-xl text-teal-400">03.</span>Some Things I've Built</h2>
-            <div className="flex-grow h-px max-w-xs bg-slate-700"></div>
-          </div>
+  <div className="max-w-6xl mx-auto">
+    <div className="flex items-center gap-4 mb-12">
+      <h2 className="text-3xl font-bold text-slate-100">
+        <span className="mr-2 font-mono text-xl text-teal-400">03.</span>Projects
+      </h2>
+      <div className="flex-grow h-px max-w-xs bg-slate-700"></div>
+    </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="flex flex-col overflow-hidden transition-all border rounded bg-slate-900 border-slate-800 hover:border-teal-500/50 group">
-                <div className="relative h-48 overflow-hidden bg-slate-800">
-                  <div className="absolute inset-0 transition-all bg-teal-500/20 group-hover:bg-transparent"></div>
-                  {/* Image Placeholder */}
-                  <div className="flex items-center justify-center w-full h-full font-mono text-slate-700">Project Preview {item}</div>
-                </div>
-                <div className="flex flex-col flex-grow p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-teal-400"><FileText size={24} /></div>
-                    <div className="flex gap-4 text-slate-400">
-                      <Github size={20} className="cursor-pointer hover:text-teal-400" />
-                      <ExternalLink size={20} className="cursor-pointer hover:text-teal-400" />
-                    </div>
-                  </div>
-                  <h3 className="mb-2 text-xl font-bold transition-colors text-slate-200 group-hover:text-teal-400">Project Name {item}</h3>
-                  <p className="flex-grow mb-4 text-sm text-slate-400">
-                    A concise description of the project goes here. Explain what it does and the problem it solves.
-                  </p>
-                  <div className="flex gap-3 font-mono text-xs text-slate-500">
-                    <span>React</span>
-                    <span>Node</span>
-                    <span>Tailwind</span>
-                  </div>
-                </div>
-              </div>
-            ))}
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {/* ASAABE Hotel System */}
+      <div className="flex flex-col overflow-hidden transition-all border rounded bg-slate-900 border-slate-800 hover:border-teal-500/50 group">
+        <div className="relative h-48 overflow-hidden bg-slate-800">
+          <div className="absolute inset-0 transition-all bg-teal-500/20 group-hover:bg-transparent"></div>
+          <img 
+            src="/ASAABE.png" 
+            alt="ASAABE Hotel System" 
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <div className="flex flex-col flex-grow p-6">
+          <div className="flex items-center justify-between mb-4">
+            <div className="text-teal-400"><FileText size={24} /></div>
+            <div className="flex gap-4 text-slate-400">
+              <a href="https://github.com/Aline-eng/ASAABE_HOTEL_SYSTEM" target="_blank" rel="noopener noreferrer">
+                <Github size={20} className="cursor-pointer hover:text-teal-400" />
+              </a>
+              <a href="https://asaabe-hotel-system.vercel.app" target="_blank" rel="noopener noreferrer">
+                <ExternalLink size={20} className="cursor-pointer hover:text-teal-400" />
+              </a>
+            </div>
+          </div>
+          <h3 className="mb-2 text-xl font-bold transition-colors text-slate-200 group-hover:text-teal-400">
+            ASAABE Hotel Management System
+          </h3>
+          <p className="flex-grow mb-4 text-sm text-slate-400">
+            Full-stack hotel booking platform with user authentication, room management, real-time booking flow, and admin dashboard for payment approval and guest management.
+          </p>
+          <div className="flex flex-wrap gap-3 font-mono text-xs text-slate-500">
+            <span>Next.js</span>
+            <span>Django REST</span>
+            <span>PostgreSQL</span>
+            <span>Material-UI</span>
+            <span>JWT Auth</span>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Placeholder Project 2 */}
+      <div className="flex flex-col overflow-hidden transition-all border rounded bg-slate-900 border-slate-800 hover:border-teal-500/50 group">
+        <div className="relative h-48 overflow-hidden bg-slate-800">
+          <div className="absolute inset-0 transition-all bg-teal-500/20 group-hover:bg-transparent"></div>
+          <div className="flex items-center justify-center w-full h-full font-mono text-slate-700">Project Preview 2</div>
+        </div>
+        <div className="flex flex-col flex-grow p-6">
+          <div className="flex items-center justify-between mb-4">
+            <div className="text-teal-400"><FileText size={24} /></div>
+            <div className="flex gap-4 text-slate-400">
+              <Github size={20} className="cursor-pointer hover:text-teal-400" />
+              <ExternalLink size={20} className="cursor-pointer hover:text-teal-400" />
+            </div>
+          </div>
+          <h3 className="mb-2 text-xl font-bold transition-colors text-slate-200 group-hover:text-teal-400">Project Name 2</h3>
+          <p className="flex-grow mb-4 text-sm text-slate-400">
+            A concise description of the project goes here. Explain what it does and the problem it solves.
+          </p>
+          <div className="flex gap-3 font-mono text-xs text-slate-500">
+            <span>React</span>
+            <span>Node</span>
+            <span>Tailwind</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Placeholder Project 3 */}
+      <div className="flex flex-col overflow-hidden transition-all border rounded bg-slate-900 border-slate-800 hover:border-teal-500/50 group">
+        <div className="relative h-48 overflow-hidden bg-slate-800">
+          <div className="absolute inset-0 transition-all bg-teal-500/20 group-hover:bg-transparent"></div>
+          <div className="flex items-center justify-center w-full h-full font-mono text-slate-700">Project Preview 3</div>
+        </div>
+        <div className="flex flex-col flex-grow p-6">
+          <div className="flex items-center justify-between mb-4">
+            <div className="text-teal-400"><FileText size={24} /></div>
+            <div className="flex gap-4 text-slate-400">
+              <Github size={20} className="cursor-pointer hover:text-teal-400" />
+              <ExternalLink size={20} className="cursor-pointer hover:text-teal-400" />
+            </div>
+          </div>
+          <h3 className="mb-2 text-xl font-bold transition-colors text-slate-200 group-hover:text-teal-400">Project Name 3</h3>
+          <p className="flex-grow mb-4 text-sm text-slate-400">
+            A concise description of the project goes here. Explain what it does and the problem it solves.
+          </p>
+          <div className="flex gap-3 font-mono text-xs text-slate-500">
+            <span>React</span>
+            <span>Node</span>
+            <span>Tailwind</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
       <section id="contact" className="relative px-6 py-24">
