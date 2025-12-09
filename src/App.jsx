@@ -477,7 +477,8 @@ const App = () => {
                 <label className="block mb-2 text-sm text-slate-400">Name</label>
                 <input 
                   required
-                  type="text" 
+                  type="text"
+                  name="name"  
                   className="w-full p-3 transition-colors border rounded bg-slate-950 border-slate-800 text-slate-200 focus:border-teal-500 focus:outline-none"
                   placeholder="Aline Nzikwinkunda"
                   value={formData.name}
@@ -489,6 +490,7 @@ const App = () => {
                 <input 
                   required
                   type="email" 
+                  name="email" 
                   className="w-full p-3 transition-colors border rounded bg-slate-950 border-slate-800 text-slate-200 focus:border-teal-500 focus:outline-none"
                   placeholder="alinenzikwinkunda@gmail.com"
                   value={formData.email}
@@ -501,12 +503,17 @@ const App = () => {
               <textarea 
                 required
                 rows="4"
+                name="message" 
                 className="w-full p-3 transition-colors border rounded resize-none bg-slate-950 border-slate-800 text-slate-200 focus:border-teal-500 focus:outline-none"
                 placeholder="Hello, I'd like to talk about..."
                 value={formData.message}
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
               ></textarea>
             </div>
+  
+ 
+            <input type="hidden" name="time" value={new Date().toLocaleString()} />
+
             <button 
               disabled={formStatus === 'sending' || formStatus === 'success'}
               className="flex items-center justify-center w-full gap-2 py-4 font-bold text-teal-400 transition-all border border-teal-500 rounded bg-teal-500/10 hover:bg-teal-500 hover:text-slate-900"
