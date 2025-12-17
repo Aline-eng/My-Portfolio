@@ -409,29 +409,40 @@ const App = () => {
 
       {/* Placeholder Project 2 */}
       <div className="flex flex-col overflow-hidden transition-all border rounded bg-slate-900 border-slate-800 hover:border-teal-500/50 group">
-        <div className="relative h-48 overflow-hidden bg-slate-800">
+          <div className="relative h-48 overflow-hidden bg-slate-800">
           <div className="absolute inset-0 transition-all bg-teal-500/20 group-hover:bg-transparent"></div>
-          <div className="flex items-center justify-center w-full h-full font-mono text-slate-700">Project Preview 2</div>
+          <img 
+            src="/ShopEasy.jpg" 
+            alt="ShopEasy E-Commerce Store" 
+            className="object-cover w-full h-full"
+          />
         </div>
-        <div className="flex flex-col flex-grow p-6">
-          <div className="flex items-center justify-between mb-4">
-            <div className="text-teal-400"><FileText size={24} /></div>
-            <div className="flex gap-4 text-slate-400">
-              <Github size={20} className="cursor-pointer hover:text-teal-400" />
-              <ExternalLink size={20} className="cursor-pointer hover:text-teal-400" />
-            </div>
-          </div>
-          <h3 className="mb-2 text-xl font-bold transition-colors text-slate-200 group-hover:text-teal-400">Project Name 2</h3>
-          <p className="flex-grow mb-4 text-sm text-slate-400">
-            A concise description of the project goes here. Explain what it does and the problem it solves.
-          </p>
-          <div className="flex gap-3 font-mono text-xs text-slate-500">
-            <span>React</span>
-            <span>Node</span>
-            <span>Tailwind</span>
-          </div>
-        </div>
+  <div className="flex flex-col flex-grow p-6">
+    <div className="flex items-center justify-between mb-4">
+      <div className="text-teal-400"><FileText size={24} /></div>
+      <div className="flex gap-4 text-slate-400">
+        <a href="https://github.com/Aline-eng/E-commerce-Store" target="_blank" rel="noopener noreferrer">
+          <Github size={20} className="cursor-pointer hover:text-teal-400" />
+        </a>
+        <a href="https://e-commerce-store-rnf7.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <ExternalLink size={20} className="cursor-pointer hover:text-teal-400" />
+        </a>
       </div>
+    </div>
+    <h3 className="mb-2 text-xl font-bold transition-colors text-slate-200 group-hover:text-teal-400">ShopEasy E-Commerce Store</h3>
+    <p className="flex-grow mb-4 text-sm text-slate-400">
+      Full-stack e-commerce platform with JWT authentication, order management, admin dashboard, and modern UI with dark mode support.
+    </p>
+    <div className="flex gap-3 font-mono text-xs text-slate-500">
+      <span>React</span>
+      <span>TypeScript</span>
+      <span>Node.js</span>
+      <span>MongoDB</span>
+      <span>Tailwind</span>
+    </div>
+  </div>
+</div>
+
 
       {/* Placeholder Project 3 */}
       <div className="flex flex-col overflow-hidden transition-all border rounded bg-slate-900 border-slate-800 hover:border-teal-500/50 group">
