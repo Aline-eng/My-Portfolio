@@ -448,8 +448,12 @@ const App = () => {
      <div className="flex flex-col overflow-hidden transition-all border rounded bg-slate-900 border-slate-800 hover:border-teal-500/50 group">
   <div className="relative h-48 overflow-hidden bg-slate-800">
     <div className="absolute inset-0 transition-all bg-teal-500/20 group-hover:bg-transparent"></div>
-    <div className="flex items-center justify-center w-full h-full font-mono text-slate-700">U'mwiza Rwanda</div>
-  </div>
+          <img 
+            src="/U'mwizaRwanda.jpg" 
+            alt="U'mwiza Rwanda NGO Platform" 
+            className="object-cover w-full h-full"
+          />
+        </div>
   <div className="flex flex-col flex-grow p-6">
     <div className="flex items-center justify-between mb-4">
       <div className="text-teal-400"><FileText size={24} /></div>
