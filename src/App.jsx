@@ -173,7 +173,7 @@ const App = () => {
             </ul>
             {/* Resume Button - Desktop */}
             <a 
-              href="/myresume.pdf" 
+              href="/Resume_Aline_NZIKWINKUNDA.pdf" 
               target="_blank"
               className="flex items-center gap-2 px-5 py-2 font-mono text-sm text-teal-400 transition-all border border-teal-500 rounded hover:bg-teal-500/10"
             >
