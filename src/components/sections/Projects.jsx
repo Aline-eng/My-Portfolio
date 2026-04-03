@@ -30,36 +30,40 @@ const projectsData = [
 ];
 
 const ProjectCard = ({ image, title, description, tech, github, live }) => (
-  <div className="flex flex-col overflow-hidden transition-all border rounded bg-slate-900 border-slate-800 hover:border-teal-500/50 group">
-    <div className="relative h-48 overflow-hidden bg-slate-800">
-      <div className="absolute inset-0 transition-all bg-teal-500/20 group-hover:bg-transparent"></div>
+  <div className="flex flex-col overflow-hidden transition-all border rounded bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-teal-500/60 group shadow-sm dark:shadow-none hover:shadow-md">
+    <div className="relative h-48 overflow-hidden bg-slate-100 dark:bg-slate-800">
+      <div className="absolute inset-0 transition-all bg-teal-500/10 group-hover:bg-transparent"></div>
       <img src={image} alt={title} className="object-cover w-full h-full" />
     </div>
     <div className="flex flex-col flex-grow p-6">
       <div className="flex items-center justify-between mb-4">
-        <div className="text-teal-400"><FileText size={24} /></div>
-        <div className="flex gap-4 text-slate-400">
-          <a href={github} target="_blank" rel="noopener noreferrer">
-            <Github size={20} className="cursor-pointer hover:text-teal-400" />
+        <div className="text-teal-500 dark:text-teal-400"><FileText size={24} /></div>
+        <div className="flex gap-4 text-slate-400 dark:text-slate-500">
+          <a href={github} target="_blank" rel="noopener noreferrer" className="hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
+            <Github size={20} />
           </a>
-          <a href={live} target="_blank" rel="noopener noreferrer">
-            <ExternalLink size={20} className="cursor-pointer hover:text-teal-400" />
+          <a href={live} target="_blank" rel="noopener noreferrer" className="hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
+            <ExternalLink size={20} />
           </a>
         </div>
       </div>
-      <h3 className="mb-2 text-xl font-bold transition-colors text-slate-200 group-hover:text-teal-400">
+      <h3 className="mb-2 text-xl font-bold transition-colors text-slate-800 dark:text-slate-200 group-hover:text-teal-500 dark:group-hover:text-teal-400">
         {title}
       </h3>
-      <p className="flex-grow mb-4 text-sm text-slate-400">{description}</p>
-      <div className="flex flex-wrap gap-3 font-mono text-xs text-slate-500">
-        {tech.map((t, i) => <span key={i}>{t}</span>)}
+      <p className="flex-grow mb-4 text-sm text-slate-600 dark:text-slate-400">{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {tech.map((t, i) => (
+          <span key={i} className="px-2 py-1 font-mono text-xs rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+            {t}
+          </span>
+        ))}
       </div>
     </div>
   </div>
 );
 
 const Projects = () => (
-  <section id="projects" className="px-6 py-20 bg-slate-900/30">
+  <section id="projects" className="px-6 py-20 bg-slate-50 dark:bg-slate-900/30">
     <div className="max-w-6xl mx-auto">
       <SectionHeader number="03" title="Projects" />
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

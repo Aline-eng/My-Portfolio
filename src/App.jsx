@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { ChevronUp } from 'lucide-react';
+import { ThemeProvider } from './context/ThemeContext';
 
 import Navbar from './components/sections/Navbar';
 import Hero from './components/sections/Hero';
@@ -10,7 +11,7 @@ import Projects from './components/sections/Projects';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 
-const App = () => {
+const PortfolioApp = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
@@ -64,7 +65,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen font-sans bg-slate-950 text-slate-300 selection:bg-teal-500/30">
+    <div className="min-h-screen font-sans transition-colors duration-300 bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-300 selection:bg-teal-500/30">
       <div className="fixed top-0 left-0 h-1 bg-teal-500 z-[60]" style={{ width: `${scrollProgress * 100}%` }} />
 
       <Navbar
@@ -96,5 +97,11 @@ const App = () => {
     </div>
   );
 };
+
+const App = () => (
+  <ThemeProvider>
+    <PortfolioApp />
+  </ThemeProvider>
+);
 
 export default App;

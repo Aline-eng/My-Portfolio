@@ -13,15 +13,15 @@ const skillsData = [
 ];
 
 const SkillCard = ({ icon, name, skills }) => (
-  <div className="p-6 transition-transform duration-300 border rounded bg-slate-900 hover:-translate-y-2 border-slate-800 hover:border-teal-500/50 group">
-    <div className="mb-4 text-teal-400 transition-transform group-hover:scale-110">{icon}</div>
-    <h3 className="mb-2 font-bold text-slate-200">{name}</h3>
-    <p className="text-sm text-slate-500">{skills}</p>
+  <div className="p-6 transition-transform duration-300 border rounded bg-white dark:bg-slate-900 hover:-translate-y-2 border-slate-200 dark:border-slate-800 hover:border-teal-500/50 group shadow-sm dark:shadow-none">
+    <div className="mb-4 text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110">{icon}</div>
+    <h3 className="mb-2 font-bold text-slate-800 dark:text-slate-200">{name}</h3>
+    <p className="text-sm text-slate-500 dark:text-slate-500">{skills}</p>
   </div>
 );
 
 const Skills = () => (
-  <section id="skills" className="px-6 py-20">
+  <section id="skills" className="px-6 py-20 bg-white dark:bg-slate-950">
     <div className="max-w-6xl mx-auto">
       <SectionHeader number="02" title="Skills & Technologies" />
       <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
