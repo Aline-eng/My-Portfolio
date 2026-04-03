@@ -65,4 +65,4 @@ This project is optimized for deployment on Vercel or Netlify.Vercel (Recommende
 Contributions, issues, and feature requests are welcome!Feel free to check the issues page.Fork the ProjectCreate your Feature Branch (git checkout -b feature/AmazingFeature)Commit your Changes (git commit -m 'Add some AmazingFeature')Push to the Branch (git push origin feature/AmazingFeature)Open a Pull Request
 # 📝 License
 Distributed under the MIT License. See LICENSE for more information.
-<div align="center"><sub>Built with ❤️ by <a href="https://github.com/Aline-eng">Aline Nzikwinkunda</a></sub></div>
+<div align="center"><sub>Built by <a href="https://github.com/Aline-eng">Aline Nzikwinkunda</a></sub></div>
