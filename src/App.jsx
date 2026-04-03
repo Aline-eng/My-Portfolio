@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { ChevronUp } from 'lucide-react';
 import { ThemeProvider } from './context/ThemeContext';
@@ -11,6 +12,9 @@ import Projects from './components/sections/Projects';
 import Experience from './components/sections/Experience';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
+import AIRecommender from './components/AIRecommender';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 const PortfolioApp = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,11 +27,9 @@ const PortfolioApp = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-
       const totalScroll = document.documentElement.scrollTop;
       const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       setScrollProgress(totalScroll / windowHeight);
-
       const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -37,7 +39,6 @@ const PortfolioApp = () => {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -53,7 +54,6 @@ const PortfolioApp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormStatus('sending');
-
     emailjs.sendForm('service_zrz01ur', 'template_vdi7knx', e.target, 'dlAwOPnYR5GHUwZbT')
       .then(() => {
         setFormStatus('success');
@@ -90,6 +90,8 @@ const PortfolioApp = () => {
       />
       <Footer />
 
+      <AIRecommender />
+
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className={`fixed bottom-8 right-8 bg-teal-500 text-slate-900 p-3 rounded shadow-lg hover:-translate-y-1 transition-all duration-300 ${scrolled ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
@@ -102,7 +104,11 @@ const PortfolioApp = () => {
 
 const App = () => (
   <ThemeProvider>
-    <PortfolioApp />
+    <Routes>
+      <Route path="/" element={<PortfolioApp />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/:slug" element={<BlogPostPage />} />
+    </Routes>
   </ThemeProvider>
 );
 

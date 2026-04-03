@@ -1,4 +1,5 @@
 import { FileText, Menu, X, Sun, Moon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 
 const navLinks = [
@@ -33,6 +34,9 @@ const Navbar = ({ scrolled, activeSection, isMenuOpen, setIsMenuOpen, scrollToSe
               </li>
             ))}
           </ul>
+          <Link to="/blog" className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
+            Blog
+          </Link>
           <a
             href="/Resume_Aline_NZIKWINKUNDA.pdf"
             target="_blank"
@@ -74,7 +78,10 @@ const Navbar = ({ scrolled, activeSection, isMenuOpen, setIsMenuOpen, scrollToSe
               {link.name}
             </button>
           ))}
-          <a
+          <Link to="/blog" className="text-lg font-medium text-left text-slate-700 dark:text-slate-300 hover:text-teal-500 dark:hover:text-teal-400">
+              Blog
+            </Link>
+            <a
             href="/Resume_Aline_NZIKWINKUNDA.pdf"
             target="_blank"
             className="px-5 py-3 mt-4 text-center text-teal-600 dark:text-teal-400 border border-teal-500 rounded bg-teal-500/10"

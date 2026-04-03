@@ -35,7 +35,7 @@ const projectsData = [
     live: "https://u-mwiza-rwanda.vercel.app/"
   },
   {
-    image: "/ASAABE.png",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
     title: "CareerCompass",
     description: "Web platform that helps students match their skills with internship requirements and receive a compatibility percentage.",
     fullDescription: "CareerCompass is a skill-matching platform designed to bridge the gap between students and internship opportunities. Students enter their skills and the system compares them against job requirements to generate a matching percentage. The platform helps students identify skill gaps and understand what they need to improve to qualify for specific roles. Built with a clean HTML/CSS/JavaScript frontend and a PHP/MySQL backend.",
@@ -45,7 +45,7 @@ const projectsData = [
     live: "#"
   },
   {
-    image: "/ShopEasy.jpg",
+    image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800",
     title: "Family Records Management",
     description: "Secure web system for registering, logging in, and managing personal family records with user authentication.",
     fullDescription: "A web-based family records management system that allows users to securely register, log in, and manage their personal family data. The system features user authentication with session management, private data access per user, and a clean interface for adding and viewing family records. Built using HTML, CSS, JavaScript for the frontend and PHP with MySQL for the backend.",
@@ -55,7 +55,7 @@ const projectsData = [
     live: "#"
   },
   {
-    image: "/ASAABE.png",
+    image: "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=800",
     title: "Student Registration System",
     description: "Java OOP-based student registration system with department validation, age/marks validation, and structured class design.",
     fullDescription: "A Java-based student registration system developed as an academic OOP project. The system validates student data including department selection, age requirements, and marks thresholds before registering a student. It uses object-oriented principles including classes, inheritance, and encapsulation to structure the codebase. The system runs interactively via the console and provides clear feedback for invalid inputs.",
