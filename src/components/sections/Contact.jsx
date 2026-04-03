@@ -5,7 +5,7 @@ const inputClass = "w-full p-3 transition-colors border rounded bg-white dark:bg
 const Contact = ({ formData, setFormData, formStatus, handleSubmit }) => (
   <section id="contact" className="relative px-6 py-24 bg-white dark:bg-slate-950">
     <div className="max-w-2xl mx-auto text-center">
-      <p className="mb-4 font-mono text-teal-500 dark:text-teal-400">04. What's Next?</p>
+      <p className="mb-4 font-mono text-teal-500 dark:text-teal-400">05. What's Next?</p>
       <h2 className="mb-6 text-4xl font-bold md:text-5xl text-slate-900 dark:text-slate-100">Get In Touch</h2>
       <p className="mb-12 text-slate-600 dark:text-slate-400">
         Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!

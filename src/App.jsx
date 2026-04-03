@@ -8,6 +8,7 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
+import Experience from './components/sections/Experience';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 
@@ -27,7 +28,7 @@ const PortfolioApp = () => {
       const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       setScrollProgress(totalScroll / windowHeight);
 
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -80,6 +81,7 @@ const PortfolioApp = () => {
       <About />
       <Skills />
       <Projects />
+      <Experience />
       <Contact
         formData={formData}
         setFormData={setFormData}
